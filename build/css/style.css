@@ -980,8 +980,16 @@ section{
   font-family: Sen, sans-serif;
 }
 
+.text-2xl{
+  font-size: 21px;
+}
+
 .text-4xl{
   font-size: 26px;
+}
+
+.text-6xl{
+  font-size: 46px;
 }
 
 .text-7xl{
@@ -1004,14 +1012,6 @@ section{
   font-size: 20px;
 }
 
-.text-2xl{
-  font-size: 21px;
-}
-
-.text-6xl{
-  font-size: 46px;
-}
-
 .font-semibold{
   font-weight: 600;
 }
@@ -1026,6 +1026,10 @@ section{
 
 .leading-none{
   line-height: 1;
+}
+
+.text-forth{
+  color: var(--forth-color);
 }
 
 .text-gray-700{
@@ -1053,10 +1057,6 @@ section{
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-forth{
-  color: var(--forth-color);
 }
 
 .shadow{

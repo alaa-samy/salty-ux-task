@@ -17,7 +17,7 @@
     @apply min-h-screen bg-bg_main font-inter text-primary dark:text-white dark:bg-black;
   }
   section {
-    @apply py-10 px-10 md:px-20 relative overflow-hidden
+    @apply py-16 px-10 md:px-28 relative overflow-hidden
   }
 }
 

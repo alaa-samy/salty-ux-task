@@ -1,15 +1,21 @@
-const showNav = document.querySelector(".show-nav");
-const closeNav = document.querySelector(".close-nav");
-const nav = document.querySelector(".nav");
+/*~~~~~~~~~~~~~~~ TOGGLE BUTTON ~~~~~~~~~~~~~~~*/
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("nav-menu");
+const closeIcon = document.getElementById("nav-close");
+const navLink = document.querySelectorAll(".nav__link");
 
-closeNav.addEventListener("click", () => {
-  nav.classList.remove("right-0");
-  nav.classList.add("right-[-50%]");
+navLink.forEach((link) =>
+  link.addEventListener("click", () => {
+    navMenu.classList.add("hidden");
+  })
+);
+
+closeIcon.addEventListener("click", () => {
+  navMenu.classList.add("hidden");
 });
 
-showNav.addEventListener("click", () => {
-  nav.classList.remove("right-[-50%]");
-  nav.classList.add("right-0");
+hamburger.addEventListener("click", () => {
+  navMenu.classList.remove("hidden");
 });
 
 /*~~~~~~~~~~~~~~~ TABS ~~~~~~~~~~~~~~~*/
@@ -73,13 +79,13 @@ themeBtn.addEventListener("click", (e) => {
 
 function darkMode() {
   html.classList.add("dark");
-  themeBtn.classList.replace("ri-moon-line", "ri-sun-line");
+  themeBtn.classList.replace("fa-moon-o", "fa-sun-o");
   localStorage.setItem("mode", "dark");
 }
 
 function lightMode() {
   html.classList.remove("dark");
-  themeBtn.classList.replace("ri-sun-line", "ri-moon-line");
+  themeBtn.classList.replace("fa-sun-o", "fa-moon-o");
   localStorage.setItem("mode", "light");
 }
 
@@ -102,9 +108,9 @@ const scrollHeader = () => {
   const header = document.getElementById("header");
 
   if (this.scrollY >= 50) {
-    header.classList.add("border-b", "border-secondaryColor");
+    header.classList.add("border-b", "bg-white");
   } else {
-    header.classList.remove("border-b", "border-secondaryColor");
+    header.classList.remove("border-b", "bg-white");
   }
 };
 window.addEventListener("scroll", scrollHeader);
@@ -132,30 +138,29 @@ const activeLink = () => {
   });
 };
 
-window.addEventListener('scroll', activeLink)
+window.addEventListener("scroll", activeLink);
 
 /*~~~~~~~~~~~~~~~ SCROLL REVEAL ANIMATION ~~~~~~~~~~~~~~~*/
 const sr = ScrollReveal({
   origin: "top",
   distance: "60px",
   duration: 2500,
-  delay: 400
-})
+  delay: 400,
+});
 
 sr.reveal(".home__image");
-sr.reveal(".home__content",  { origin: "bottom" });
+sr.reveal(".home__content", { origin: "bottom" });
 
-sr.reveal(".category__card", { interval: 300 })
+sr.reveal(".category__card", { interval: 300 });
 
-sr.reveal(".promo__card-1",  { origin: "left" });
-sr.reveal(".promo__card-2",  { origin: "right" });
+sr.reveal(".promo__card-1", { origin: "left" });
+sr.reveal(".promo__card-2", { origin: "right" });
 
-sr.reveal(".about__img",  { origin: "bottom" });
-sr.reveal(".about__content",  { origin: "top" });
+sr.reveal(".about__img", { origin: "bottom" });
+sr.reveal(".about__content", { origin: "top" });
 
-sr.reveal(".menu__items",  { origin: "left" });
+sr.reveal(".menu__items", { origin: "left" });
 
-sr.reveal(".customer__review",  { origin: "right" });
+sr.reveal(".customer__review", { origin: "right" });
 
 sr.reveal(".footer");
-

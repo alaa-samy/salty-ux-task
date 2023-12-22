@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Sen:wght@700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,5 +7,17 @@
 :root {
   --main-color: #2d3134;
   --secondary-color: #f66f4d;
+  --third-color: #5b5f62;
+  --forth-color: #939597;
   --bg-main: #faf8ed;
 }
+
+@layer base {
+  body {
+    @apply min-h-screen bg-bg_main font-inter text-primary dark:text-white dark:bg-black;
+  }
+  section {
+    @apply py-10 px-10 md:px-20 relative overflow-hidden
+  }
+}
+

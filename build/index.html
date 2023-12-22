@@ -5,52 +5,303 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <link rel="shortcut icon" type="image/png" href="img/fav.png">
+    <link rel="shortcut icon" type="image/png" href="favicon.ico">
     <title>UX - Task</title>
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
     <link href="css/swiper.min.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
 </head>
 
-<body class="min-h-screen bg-bg_main dark:bg-black dark:text-white">
-    <header class="sticky top-0 z-10 bg-teal-700 text-white">
-        <section class="mx-auto flex max-w-4xl items-center justify-between p-4">
-          <h1 class="text-3xl font-medium">
-            <a href="#hero">🚀 Acme Rockets</a>
-          </h1>
-          <div>
-            <button id="hamburger-button" class="relative h-8 w-8 cursor-pointer text-3xl md:hidden">
-              <!-- &#9776; -->
-              <div
-                class="absolute top-4 -mt-0.5 h-1 w-8 rounded bg-white transition-all duration-500 before:absolute before:h-1 before:w-8 before:-translate-x-4 before:-translate-y-3 before:rounded before:bg-white before:transition-all before:duration-500 before:content-[''] after:absolute after:h-1 after:w-8 after:-translate-x-4 after:translate-y-3 after:rounded after:bg-white after:transition-all after:duration-500 after:content-['']">
-              </div>
-            </button>
-            <nav class="hidden space-x-8 text-xl md:block" aria-label="main">
-              <a href="#rockets" class="hover:opacity-90">Our Rockets</a>
-              <a href="#testimonials" class="hover:opacity-90">Testimonials</a>
-              <a href="#contact" class="hover:opacity-90">Contact Us</a>
-            </nav>
-          </div>
-        </section>
-        <section id="mobile-menu"
-          class="top-68 justify-center absolute hidden w-full origin-top animate-open-menu flex-col bg-black text-5xl">
-          <!-- <button class="text-8xl self-end px-6">
-                    &times;
-                </button> -->
-          <nav class="flex min-h-screen flex-col items-center py-8" aria-label="mobile">
-            <a href="#hero" class="w-full py-6 text-center hover:opacity-90">Home</a>
-            <a href="#rockets" class="w-full py-6 text-center hover:opacity-90">Our Rockets</a>
-            <a href="#testimonials" class="w-full py-6 text-center hover:opacity-90">Testimonials</a>
-            <a href="#contact" class="w-full py-6 text-center hover:opacity-90">Contact Us</a>
-            <a href="#footer" class="w-full py-6 text-center hover:opacity-90">Legal</a>
-          </nav>
-        </section>
-      </header>
+<body>
+    <!-- <header class="bg-white">
+        <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 md:px-8" aria-label="Global">
+            <div class="flex md:flex-1">
+                <a href="#" class="-m-1.5 p-1.5">
+                    <span class="sr-only">Your Company</span>
+                    <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+                </a>
+            </div>
+            <div class="flex md:hidden">
+                <button type="button"
+                    class="show-nav -m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+                    <span class="sr-only">Open main menu</span>
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden md:flex md:gap-x-12">
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Features</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Marketplace</a>
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Company</a>
+            </div>
+            <div class="hidden md:flex md:flex-1 md:justify-end">
+                <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Log in <span
+                        aria-hidden="true">&rarr;</span></a>
+            </div>
+        </nav>
+        <div class="md:hidden" role="dialog" aria-modal="true">
+            <div class="fixed inset-0 z-10"></div>
+            <div
+                class="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+                <div class="flex items-center justify-between">
+                    <a href="#" class="-m-1.5 p-1.5">
+                        <span class="sr-only">Your Company</span>
+                        <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                            alt="">
+                    </a>
+                    <button type="button" class="close-nav -m-2.5 rounded-md p-2.5 text-gray-700">
+                        <span class="sr-only">Close menu</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="mt-6 flow-root">
+                    <div class="-my-6 divide-y divide-gray-500/10">
+                        <div class="space-y-2 py-6">
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</a>
+                        </div>
+                        <div class="py-6">
+                            <a href="#"
+                                class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Log
+                                in</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header> -->
+    <!-- Slider -->
+    <section class="ralative overflow-hidden h-[700px]">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-12 items-center">
+                <div class="col-span-full md:col-span-6">
+                    <div>
+                        <h1
+                            class="font-sens text-4xl sm:text-5xl lg:text-8xl leading-none text-primary dark:text-white mb-5">
+                            Discover the Best Lovely Places</h1>
+                        <p class="text-lg">Plan and book your perfect trip with expert advice, travel tips, destination
+                            information and inspiration from us.</p>
+                    </div>
+                </div>
+                <div class="col-span-full md:col-span-6">
+                    <div class="h-[400px] md:h-full">
+                        <img src="img/banner.png" alt="Banner" class="w-full h-full object-contain" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="relative">
+        <div class="swiper py-10">
+            <div class="grid grid-cols-3 gap-4 mb-10">
+                <div class="">
+                    <h2 class="text-7xl font-600">Categories</h2>
+                    <p class="text-base text-third dark:text-white">Here are lots of interesting destinations to visit,
+                        but don’t be confused—they’re already grouped by category.</p>
+                </div>
+                <div class="col-start-3 relative">
+                    <div class="swiper-button-next !flex"></div>
+                    <div class="swiper-button-prev !flex"></div>
+                </div>
+            </div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide ">
+                    <a href="#" class="relative text-center group">
+                        <div class="h-[220px] overflow-hidden">
+                            <img src="img/category1.png" alt="Beach"
+                                class="h-full w-full object-contain group-hover:grayscale-[80%]" />
+                            <span
+                                class="hidden text-xl font-600 absolute top-[37%] h-0 w-full text-white group-hover:block group-hover:h-full">Visit</span>
+                        </div>
+                        <h3 class="text-4xl text-main dark:text-secondary font-500">Beach</h3>
+                    </a>
+                </div>
+
+                <div class="swiper-slide ">
+                    <a href="#" class="relative text-center group">
+                        <div class="h-[220px] overflow-hidden">
+                            <img src="img/category2.png" alt="Dessert"
+                                class="h-full w-full object-contain group-hover:grayscale-[80%]" />
+                            <span
+                                class="hidden text-xl font-600 absolute top-[37%] h-0 w-full text-white group-hover:block group-hover:h-full">Visit</span>
+                        </div>
+                        <h3 class="text-4xl text-main dark:text-secondary font-500">Dessert</h3>
+                    </a>
+                </div>
+
+                <div class="swiper-slide ">
+                    <a href="#" class="relative text-center group">
+                        <div class="h-[220px] overflow-hidden">
+                            <img src="img/category3.png" alt="Mountain"
+                                class="h-full w-full object-contain group-hover:grayscale-[80%]" />
+                            <span
+                                class="hidden text-xl font-600 absolute top-[37%] h-0 w-full text-white group-hover:block group-hover:h-full">Visit</span>
+                        </div>
+                        <h3 class="text-4xl text-main dark:text-secondary font-500">Mountain</h3>
+                    </a>
+                </div>
+
+                <div class="swiper-slide ">
+                    <a href="#" class="relative text-center group">
+                        <div class="h-[220px] overflow-hidden">
+                            <img src="img/category4.png" alt="Temple"
+                                class="h-full w-full object-contain group-hover:grayscale-[80%]" />
+                            <span
+                                class="hidden text-xl font-600 absolute top-[37%] h-0 w-full text-white group-hover:block group-hover:h-full">Visit</span>
+                        </div>
+                        <h3 class="text-4xl text-main dark:text-secondary font-500">Temple</h3>
+                    </a>
+                </div>
+
+                <div class="swiper-slide ">
+                    <a href="#" class="relative text-center group">
+                        <div class="h-[220px] overflow-hidden">
+                            <img src="img/category5.png" alt="Tower"
+                                class="h-full w-full object-contain group-hover:grayscale-[80%]" />
+                            <span
+                                class="hidden text-xl font-600 absolute top-[37%] h-0 w-full text-white group-hover:block group-hover:h-full">Visit</span>
+                        </div>
+                        <h3 class="text-4xl text-main dark:text-secondary font-500">Tower</h3>
+                    </a>
+                </div>
+
+                <div class="swiper-slide ">
+                    <a href="#" class="relative text-center group">
+                        <div class="h-[220px] overflow-hidden">
+                            <img src="img/category6.png" alt="Pyramid"
+                                class="h-full w-full object-contain group-hover:grayscale-[80%]" />
+                            <span
+                                class="hidden text-xl font-600 absolute top-[37%] h-0 w-full text-white group-hover:block group-hover:h-full">Visit</span>
+                        </div>
+                        <h3 class="text-4xl text-main dark:text-secondary font-500">Pyramid</h3>
+                    </a>
+                </div>
+                <!-- <div class="swiper-slide group transition ease-in-out duration-500">
+                        <a href="#" class="relative text-center">
+                            <div class="h-[220px] overflow-hidden">
+                                <img src="img/category1.png" alt="Beach"
+                                    class="h-full w-full object-contain group-hover:grayscale-[60%]" />
+                                <span class="flex absolute bottom-0 h-0 w-full text-white group-hover:h-full">Visit</span>
+                            </div>
+                            <h3 class="text-4xl text-main dark:text-secondary font-500">Beach</h3>
+                        </a>
+                    </div> -->
+            </div>
+            <!-- <div class="swiper-pagination"></div> -->
+        </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section>
+        <div class="container">
+            <div class="grid grid-cols-12 gap-4">
+                <div class="col-span-full md:col-span-6">
+                    <div class="">
+                        <img src="img/about.png" alt="About" class="h-full w-full object-contain" />
+                    </div>
+                </div>
+                <div class="col-span-full md:col-span-6">
+                    <span class="text-secondary text-xl">Our Experience</span>
+                    <h2 class="text-main dark:text-white text-7xl mb-10">Our Stories Have Adventures</h2>
+                    <p class="">We are experienced in bringing adventures to stay their journey, with all outdoor
+                        destinations in the world as our specialties. Start your adventure now! Nature has already
+                        called you!</p>
+                    <div class="grid grid-cols-12 gap-3" id="counters_1">
+                        <div class="col-span-full lg:col-span-4 md:col-span-6">
+                            <div class="block items-center gap-2">
+                                <div class="text-secondary text-6xl flex">
+                                    <div class="counter" data-TargetNum="12" data-Speed="2500" data-Easing="linear">
+                                    </div>
+                                    <span>K+</span>
+                                </div>
+                                <h3 class="text-forth text-2xl">Succes Journey</h3>
+                            </div>
+                        </div>
+                        <div class="col-span-full lg:col-span-4 md:col-span-6">
+                            <div class="block md:flex items-center gap-2">
+                                <!-- <img src="img/account-manager.svg" alt="" class="w-16 h-16 relative"> -->
+                                <div>
+                                    <div class="counter_card">
+                                        <div class="counter" data-TargetNum="900" data-Speed="2500"
+                                            data-Easing="linear"></div>
+                                        <span>+</span>
+                                    </div>
+                                    <h3 class="text-main text-xl font-nexaB">Happy Clients</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-span-full lg:col-span-4 md:col-span-6">
+                            <div class="block md:flex items-center gap-2">
+                                <!-- <img src="img/account-manager.svg" alt="" class="w-16 h-16 relative"> -->
+                                <div>
+                                    <div class="counter_card">
+                                        <div class="counter" data-TargetNum="900" data-Speed="2500"
+                                            data-Easing="linear"></div>
+                                        <span>+</span>
+                                    </div>
+                                    <h3 class="text-main text-xl font-nexaB">Happy Clients</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/swiper.min.js"></script>
     <script type="text/javascript" src="js/counter.js"></script>
-    <script type="text/javascript" src="js/script.js"></script>
+    <!-- <script type="text/javascript" src="js/script.js"></script> -->
+    <script>
+
+        // main-silder-swiper
+        const swiper = new Swiper('.swiper', {
+            speed: 400,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            },
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            grabCursor: true,
+            breakpoints: {
+                // when window width is >= 640px
+                640: {
+                    slidesPerView: 2,
+                },
+                // when window width is >= 768px
+                768: {
+                    slidesPerView: 4,
+                },
+                // when window width is >= 1024px
+                1024: {
+                    slidesPerView: 6,
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>

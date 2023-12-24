@@ -169,8 +169,8 @@
   </section>
 
   <!-- Categories Section -->
-  <section class="relative">
-    <div class=" py-10">
+  <section>
+    <div class="container py-10">
       <div class="grid grid-cols-3 gap-4 mb-10">
         <div class="">
           <h2 class="text-7xl font-600">Categories</h2>
@@ -178,8 +178,8 @@
             but don’t be confused—they’re already grouped by category.</p>
         </div>
         <div class="col-start-3 relative">
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next !flex"></div>
+          <div class="swiper-button-prev !flex"></div>
         </div>
       </div>
       <div class="swiper">
@@ -264,13 +264,29 @@
     <div class="container">
       <div class="grid grid-cols-12 gap-5">
         <div class="col-span-full md:col-span-6">
-          <div class="">
+          <div class="relative">
+            <div class="bg-white p-3 rounded-[14px] w-fit text-center absolute bottom-24 md:left-[-40px]">
+              <div
+                class="w-20 h-20 bg-gradient-to-b from-amber-100 to-amber-200 rounded-full flex items-center justify-center">
+                <img src="img/location.png" alt="Location" />
+              </div>
+              <span class="text-secondary text-3xl font-semibold mt-5 block text-center">600%</span>
+              <span class="text-forth text-[19px] mt-3">Destinations</span>
+            </div>
             <img src="img/about.png" alt="About" />
+            <div
+              class="bg-white py-3 px-5 rounded-[14px] w-fit text-center absolute bottom-10 md:right-0 flex items-center gap-5">
+              <img src="img/customer.png" alt="Customers" />
+              <div class="">
+                <p class="text-main text-3xl font-semibold text-center font-poppin">5000+</p>
+                <span class="text-third text-xs mt-3 font-poppin">Customars</span>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="col-span-full md:col-span-6">
+        <div class="col-span-full md:col-span-6 pl-0 md:pl-10">
           <span class="text-secondary text-xl leading-tight tracking-[4px] mb-3">Our Experience</span>
-          <h2 class="text-primary dark:text-white text-7xl mb-10 font-semibold leading-[66px]">Our Stories
+          <h2 class="text-primary dark:text-white text-5xl md:text-6xl lg:text-7xl mb-10 font-semibold lg:leading-[66px]">Our Stories
             Have
             Adventures</h2>
           <p class="text-base text-third dark:text-white">We are experienced in bringing adventures to stay
@@ -280,17 +296,17 @@
             called you!</p>
           <div class="grid grid-cols-12 gap-5 mt-10" id="counters_1">
             <div class="col-span-full lg:col-span-4 md:col-span-6">
-              <div class="block items-center gap-2 bg-white rounded-lg py-5 px-10">
-                <div class="text-secondary text-6xl flex font-semibold">
+              <div class="block items-center gap-2 bg-white rounded-lg p-3 md:py-5 md:px-7">
+                <div class="text-secondary text-4xl lg:text-6xl flex font-semibold">
                   <div class="counter" data-TargetNum="12" data-Speed="2500" data-Easing="linear">
                   </div>
                   <span>K+</span>
                 </div>
-                <h3 class="text-forth text-2xl leading-[29px] mt-3">Succes Journey</h3>
+                <h3 class="text-forth text-lg md:text-2xl leading-[29px] mt-3">Succes Journey</h3>
               </div>
             </div>
             <div class="col-span-full lg:col-span-4 md:col-span-6">
-              <div class="block items-center gap-2 bg-white rounded-lg py-5 px-10">
+              <div class="block items-center gap-2 bg-white rounded-lg py-5 px-7">
                 <div class="text-secondary text-6xl flex font-semibold">
                   <div class="counter" data-TargetNum="16" data-Speed="2500" data-Easing="linear">
                   </div>
@@ -300,7 +316,7 @@
               </div>
             </div>
             <div class="col-span-full lg:col-span-4 md:col-span-6">
-              <div class="block items-center gap-2 bg-white rounded-lg py-5 px-10">
+              <div class="block items-center gap-2 bg-white rounded-lg py-5 px-7">
                 <div class="text-secondary text-6xl flex font-semibold">
                   <div class="counter" data-TargetNum="20" data-Speed="2500" data-Easing="linear">
                   </div>
@@ -316,28 +332,139 @@
   </section>
 
   <!-- Popular Section -->
+  <section class="!px-0 !pl-10 md:!pl-28 !pr-0">
+    <div class="block md:flex items-center justify-between gap-4 mb-10 md:pr-20">
+      <h2 class="text-5xl md:text-6xl lg:text-7xl font-semibold lg:leading-[66px] w-full lg:w-1/3">Find Popular
+        Destination</h2>
+      <div class="relative w-[150px] max-w-sm:mt-10">
+        <div
+          class="swiper-button-prev w-14 h-14 p-5 rounded-full border-[1px] border-primary text-primary hover:bg-primary hover:text-white dark:text-secondary dark:border-secondary dark:hover:bg-secondary">
+          <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 13L1 7L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+        <div
+          class="swiper-button-next w-14 h-14 p-5 rounded-full border-[1px] border-primary text-primary hover:bg-primary hover:text-white dark:text-secondary dark:border-secondary dark:hover:bg-secondary ">
+          <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 13L7 7L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="relative popular-slider overflow-hidden">
+      <div class="swiper-wrapper">
+        <div
+          class="swiper-slide px-2 pt-2 pb-5 relative rounded-lg border-2 border-white transition ease-in-out duration-300 hover:shadow-sm">
+          <div class="h-[250px] overflow-hidden rounded-2xl mb-3">
+            <img src="img/popular1.png" alt="Beach" class="h-full w-full object-cover" />
+          </div>
+          <div class="px-3">
+            <h3 class="text-3xl font-semibold text-primary leading-normal">Mountain Hiking Tour</h3>
+            <span class="text-sm font-normal text-third">Mountain Hiking Tour</span>
+          </div>
+          <div class="flex items-center justify-between px-3 mt-4">
+            <p class="text-base text-third">
+              <span class="text-3xl font-semibold text-primary">$89 </span> /Person
+            </p>
+            <button
+              class="text-primary py-1.5 px-3.5 rounded-[27px] text-sm font-normal border-[1px] border-primary hover:text-white hover:bg-primary dark:text-white dark:border-secondary dark:hover:bg-secondary">Book
+              Now</button>
+          </div>
+        </div>
 
-  
+        <div
+          class="swiper-slide px-2 pt-2 pb-5 relative rounded-lg border-2 border-white transition ease-in-out duration-300 hover:shadow-sm">
+          <div class="h-[250px] overflow-hidden rounded-2xl mb-3">
+            <img src="img/popular2.png" alt="Beach" class="h-full w-full object-cover" />
+          </div>
+          <div class="px-3">
+            <h3 class="text-3xl font-semibold text-primary leading-normal">Mountain Hiking Tour</h3>
+            <span class="text-sm font-normal text-third">Mountain Hiking Tour</span>
+          </div>
+          <div class="flex items-center justify-between px-3 mt-4">
+            <p class="text-base text-third">
+              <span class="text-3xl font-semibold text-primary">$89 </span> /Person
+            </p>
+            <button
+              class="text-primary py-1.5 px-3.5 rounded-[27px] text-sm font-normal border-[1px] border-primary hover:text-white hover:bg-primary dark:text-white dark:border-secondary dark:hover:bg-secondary">Book
+              Now</button>
+          </div>
+        </div>
+
+        <div
+          class="swiper-slide px-2 pt-2 pb-5 relative rounded-lg border-2 border-white transition ease-in-out duration-300 hover:shadow-sm">
+          <div class="h-[250px] overflow-hidden rounded-2xl mb-3">
+            <img src="img/popular3.png" alt="Beach" class="h-full w-full object-cover" />
+          </div>
+          <div class="px-3">
+            <h3 class="text-3xl font-semibold text-primary leading-normal">Mountain Hiking Tour</h3>
+            <span class="text-sm font-normal text-third">Mountain Hiking Tour</span>
+          </div>
+          <div class="flex items-center justify-between px-3 mt-4">
+            <p class="text-base text-third">
+              <span class="text-3xl font-semibold text-primary">$89 </span> /Person
+            </p>
+            <button
+              class="text-primary py-1.5 px-3.5 rounded-[27px] text-sm font-normal border-[1px] border-primary hover:text-white hover:bg-primary dark:text-white dark:border-secondary dark:hover:bg-secondary">Book
+              Now</button>
+          </div>
+        </div>
+
+        <div
+          class="swiper-slide px-2 pt-2 pb-5 relative rounded-lg border-2 border-white transition ease-in-out duration-300 hover:shadow-sm">
+          <div class="h-[250px] overflow-hidden rounded-2xl mb-4">
+            <img src="img/popular1.png" alt="Beach" class="h-full w-full object-cover" />
+          </div>
+          <div class="px-3">
+            <h3 class="text-3xl font-semibold text-primary leading-normal">Mountain Hiking Tour</h3>
+            <span class="text-sm font-normal text-third">Mountain Hiking Tour</span>
+          </div>
+          <div class="flex items-center justify-between px-3 mt-3">
+            <p class="text-base text-third">
+              <span class="text-3xl font-semibold text-primary">$89 </span> /Person
+            </p>
+            <button
+              class="text-primary py-1.5 px-3.5 rounded-[27px] text-sm font-normal border-[1px] border-primary hover:text-white hover:bg-primary dark:text-white dark:border-secondary dark:hover:bg-secondary">Book
+              Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
   <!-- Top Section -->
   <section>
     <div class="container mx-auto">
       <div class="text-center">
-        <h2 class="text-primary dark:text-white text-7xl mb-7 font-semibold leading-[66px]">Top Destinations</h2>
+        <h2 class="text-primary dark:text-white text-5xl md:text-6xl lg:text-7xl mb-7 font-semibold lg:leading-[66px]">
+          Top Destinations</h2>
         <p class="text-base font-normal leading-none text-third dark:text-white">Sost Brilliant reasons Entrada should
           be your one-stop-shop!</p>
       </div>
 
       <div class="tabs-container">
-        <ul aria-labelledby="tabs-title" class="flex items-center justify-center gap-3 my-10">
-          <li><a id="tab-1" href="#london"
-              class="font-poppin px-5 py-2.5 text-sm rounded-3xl border-[1px] border-primary text-main dark:border-white dark:text-white aria-[selected=true]:bg-primary dark:aria-[selected=true]:bg-secondary aria-[selected=true]:text-white">
-              London </a></li>
-          <li><a id="tab-2" href="#bangkok"
-            class="font-poppin px-5 py-2.5 text-sm rounded-3xl border-[1px] border-primary text-main dark:border-white dark:text-white aria-[selected=true]:bg-primary dark:aria-[selected=true]:bg-secondary aria-[selected=true]:text-white"> Bangkok </a>
+        <ul aria-labelledby="tabs-title" class="flex items-center justify-center gap-1 md:gap-3 my-10">
+          <li class="h-10 mb-1">
+            <a id="tab-1" href="#london"
+              class="d-block font-poppin px-2 md:px-5 py-2.5 text-sm rounded-3xl border-[1px] border-primary text-main dark:border-white dark:text-white aria-[selected=true]:bg-primary dark:aria-[selected=true]:bg-secondary aria-[selected=true]:text-white">
+              London </a>
           </li>
-          <li><a id="tab-3" class="font-poppin px-5 py-2.5 text-sm rounded-3xl border-[1px] border-primary text-main dark:border-white dark:text-white aria-[selected=true]:bg-primary dark:aria-[selected=true]:bg-secondary aria-[selected=true]:text-white" href="#england"> England </a></li>
-          <li><a id="tab-4" class="font-poppin px-5 py-2.5 text-sm rounded-3xl border-[1px] border-primary text-main dark:border-white dark:text-white aria-[selected=true]:bg-primary dark:aria-[selected=true]:bg-secondary aria-[selected=true]:text-white" href="#singapore"> Singapore </a></li>
-          <li><a id="tab-5" class="font-poppin px-5 py-2.5 text-sm rounded-3xl border-[1px] border-primary text-main dark:border-white dark:text-white aria-[selected=true]:bg-primary dark:aria-[selected=true]:bg-secondary aria-[selected=true]:text-white" href="#italy"> Italy </a></li>
+          <li class="h-10 mb-1"><a id="tab-2" href="#bangkok"
+              class="font-poppin px-2 md:px-5 py-2.5 text-sm rounded-3xl border-[1px] border-primary text-main dark:border-white dark:text-white aria-[selected=true]:bg-primary dark:aria-[selected=true]:bg-secondary aria-[selected=true]:text-white">
+              Bangkok </a>
+          </li>
+          <li class="h-10 mb-1"><a id="tab-3"
+              class="font-poppin px-2 md:px-5 py-2.5 text-sm rounded-3xl border-[1px] border-primary text-main dark:border-white dark:text-white aria-[selected=true]:bg-primary dark:aria-[selected=true]:bg-secondary aria-[selected=true]:text-white"
+              href="#england"> England </a></li>
+          <li class="h-10 mb-1"><a id="tab-4"
+              class="font-poppin px-2 md:px-5  py-2.5 text-sm rounded-3xl border-[1px] border-primary text-main dark:border-white dark:text-white aria-[selected=true]:bg-primary dark:aria-[selected=true]:bg-secondary aria-[selected=true]:text-white"
+              href="#singapore"> Singapore </a></li>
+          <li class="h-10 mb-1"><a id="tab-5"
+              class="font-poppin px-2 md:px-5  py-2.5 text-sm rounded-3xl border-[1px] border-primary text-main dark:border-white dark:text-white aria-[selected=true]:bg-primary dark:aria-[selected=true]:bg-secondary aria-[selected=true]:text-white"
+              href="#italy"> Italy </a></li>
         </ul>
 
         <div class="tabs__panels flow">
@@ -401,11 +528,11 @@
           </div>
 
           <div id="bangkok" aria-labelledby="tab-2">
-            <div class="grid grid-cols-3 lg:grid-rows-2 gap-4 lg:max-h-[500px] h-full">
+            <div class="grid grid-cols-2 lg:grid-rows-2 gap-4 lg:max-h-[500px] h-full">
               <a href="#" class="relative h-[230px] rounded-2xl overflow-hidden group">
                 <span
                   class="absolute top-3 left-3 bg-white text-primary border-[1px] border-primary rounded-3xl px-3 py-1 text-sm group-hover:bg-primary group-hover:text-white transition ease-linear duration-300">3.5</span>
-                <img src="img/top1.png" alt="image" class="w-full h-full object-cover" />
+                <img src="img/top3.png" alt="image" class="w-full h-full object-cover" />
                 <div class="absolute block bottom-5 z-1 left-3">
                   <h4 class="text-white text-xl font-semibold leading-tight mb-2">Vientam</h4>
                   <p class="text-white text-sm font-normal">Worefall</p>
@@ -414,7 +541,7 @@
               <a href="#" class="relative h-[230px] rounded-2xl overflow-hidden group">
                 <span
                   class="absolute top-3 left-3 bg-white text-primary border-[1px] border-primary rounded-3xl px-3 py-1 text-sm group-hover:bg-primary group-hover:text-white transition ease-linear duration-300">3.5</span>
-                <img src="img/top2.png" alt="image" class="w-full h-full object-cover" />
+                <img src="img/top1.png" alt="image" class="w-full h-full object-cover" />
                 <div class="absolute block bottom-5 z-1 left-3">
                   <h4 class="text-white text-xl font-semibold leading-tight mb-2">Vientam</h4>
                   <p class="text-white text-sm font-normal">Worefall</p>
@@ -441,11 +568,11 @@
             </div>
           </div>
           <div id="england" aria-labelledby="tab-3">
-            <div class="grid grid-cols-3 lg:grid-rows-2 gap-4 lg:max-h-[500px] h-full">
+            <div class="grid grid-cols-2 lg:grid-rows-2 gap-4 lg:max-h-[500px] h-full">
               <a href="#" class="relative h-[230px] rounded-2xl overflow-hidden group">
                 <span
                   class="absolute top-3 left-3 bg-white text-primary border-[1px] border-primary rounded-3xl px-3 py-1 text-sm group-hover:bg-primary group-hover:text-white transition ease-linear duration-300">3.5</span>
-                <img src="img/top1.png" alt="image" class="w-full h-full object-cover" />
+                <img src="img/top2.png" alt="image" class="w-full h-full object-cover" />
                 <div class="absolute block bottom-5 z-1 left-3">
                   <h4 class="text-white text-xl font-semibold leading-tight mb-2">Vientam</h4>
                   <p class="text-white text-sm font-normal">Worefall</p>
@@ -454,7 +581,7 @@
               <a href="#" class="relative h-[230px] rounded-2xl overflow-hidden group">
                 <span
                   class="absolute top-3 left-3 bg-white text-primary border-[1px] border-primary rounded-3xl px-3 py-1 text-sm group-hover:bg-primary group-hover:text-white transition ease-linear duration-300">3.5</span>
-                <img src="img/top2.png" alt="image" class="w-full h-full object-cover" />
+                <img src="img/top4.png" alt="image" class="w-full h-full object-cover" />
                 <div class="absolute block bottom-5 z-1 left-3">
                   <h4 class="text-white text-xl font-semibold leading-tight mb-2">Vientam</h4>
                   <p class="text-white text-sm font-normal">Worefall</p>
@@ -605,18 +732,20 @@
   <section>
     <div class="container">
       <div class="grid grid-cols-12 gap-5">
-        <div class="col-span-full md:col-span-6">
-          <div class="">
+        <div class="col-span-full lg:col-span-6">
+          <div class="flex items-center justify-center">
             <img src="img/clients.png" alt="Testimonials" />
           </div>
         </div>
-        <div class="col-span-full md:col-span-6 relative overflow-hidden">
+        <div class="col-span-full lg:col-span-6 relative overflow-hidden">
           <span class="block w-[12%] h-2 rounded bg-gradient-to-b from-amber-200 to-orange-300 mb-3"></span>
-          <h2 class="text-primary dark:text-white text-7xl mb-10 font-semibold leading-[66px] capitalize">A customer
+          <h2
+            class="text-primary dark:text-white text-5xl md:text-6xl lg:text-7xl mb-10 font-semibold lg:leading-[66px] capitalize">
+            A customer
             said about us:</h2>
-          <div class="swiper_two">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide bg-white p-10 rounded-2xl">
+          <div class="swiper swiper_two bg-white p-10 rounded-2xl">
+            <div class="swiper-wrapper ">
+              <div class="swiper-slide">
                 <p class="text-third text-lg font-normal leading-[30px]">Salty helped me a lot in finding the best place
                   for our first outdoor adventure trip. They responded very quickly and gave me a detailed account of
                   the place—its history, as well as its best features.</p>
@@ -632,35 +761,59 @@
                     <h4 class="text-primary text-xl font-medium leading-tight mb-2">Andrew Sarma</h4>
                     <span class="text-third text-xs font-normal leading-3 mb-0">Enterpreneur</span>
                   </div>
-                  <div class="relative">
-                    <div class="swiper-button-next slider_arrows"></div>
-                    <div class="swiper-button-prev slider_arrows"></div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <p class="text-third text-lg font-normal leading-[30px]">Salty helped me a lot in finding the best place
+                  for our first outdoor adventure trip. They responded very quickly and gave me a detailed account of
+                  the place—its history, as well as its best features.</p>
+                <div class="flex mt-7 mb-5 items-center justify-between">
+                  <div>
+                    <div class="flex gap-1 mb-3">
+                      <img src="img/star.svg" alt="Star" />
+                      <img src="img/star.svg" alt="Star" />
+                      <img src="img/star.svg" alt="Star" />
+                      <img src="img/star.svg" alt="Star" />
+                      <img src="img/star.svg" alt="Star" />
+                    </div>
+                    <h4 class="text-primary text-xl font-medium leading-tight mb-2">Andrew Sarma</h4>
+                    <span class="text-third text-xs font-normal leading-3 mb-0">Enterpreneur</span>
                   </div>
                 </div>
               </div>
-
-              <div class="swiper-slide ">
-                <a href="#" class="relative text-center group">
-                  <div class="h-[220px] overflow-hidden">
-                    <img src="img/category2.png" alt="Dessert"
-                      class="h-full w-full object-contain group-hover:grayscale-[80%]" />
-                    <span
-                      class="hidden text-xl font-600 absolute top-[37%] h-0 w-full text-white group-hover:block group-hover:h-full">Visit</span>
+              <div class="swiper-slide">
+                <p class="text-third text-lg font-normal leading-[30px]">Salty helped me a lot in finding the best place
+                  for our first outdoor adventure trip. They responded very quickly and gave me a detailed account of
+                  the place—its history, as well as its best features.</p>
+                <div class="flex mt-7 mb-5 items-center justify-between">
+                  <div>
+                    <div class="flex gap-1 mb-3">
+                      <img src="img/star.svg" alt="Star" />
+                      <img src="img/star.svg" alt="Star" />
+                      <img src="img/star.svg" alt="Star" />
+                      <img src="img/star.svg" alt="Star" />
+                      <img src="img/star.svg" alt="Star" />
+                    </div>
+                    <h4 class="text-primary text-xl font-medium leading-tight mb-2">Andrew Sarma</h4>
+                    <span class="text-third text-xs font-normal leading-3 mb-0">Enterpreneur</span>
                   </div>
-                  <h3 class="text-4xl text-primary dark:text-secondary font-500">Dessert</h3>
-                </a>
+                </div>
               </div>
-
-              <div class="swiper-slide ">
-                <a href="#" class="relative text-center group">
-                  <div class="h-[220px] overflow-hidden">
-                    <img src="img/category3.png" alt="Mountain"
-                      class="h-full w-full object-contain group-hover:grayscale-[80%]" />
-                    <span
-                      class="hidden text-xl font-600 absolute top-[37%] h-0 w-full text-white group-hover:block group-hover:h-full">Visit</span>
-                  </div>
-                  <h3 class="text-4xl text-primary dark:text-secondary font-500">Mountain</h3>
-                </a>
+            </div>
+            <div class="relative md:absolute flex bg-white items-center md:bottom-14 right-2 md:right-5 gap-4 z-10">
+              <div
+                class="swiper-prev w-14 h-14 p-5 text-center rounded-full border-[1px] border-primary text-primary hover:bg-primary hover:text-white dark:text-secondary dark:border-secondary dark:hover:bg-secondary">
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 13L1 7L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div
+                class="swiper-next w-14 h-14 p-5 text-center rounded-full border-[1px] border-primary text-primary hover:bg-primary hover:text-white dark:text-secondary dark:border-secondary dark:hover:bg-secondary ">
+                <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 13L7 7L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
               </div>
             </div>
           </div>
@@ -901,23 +1054,44 @@
     // testimonla-silder-swiper
     const swiper2 = new Swiper('.swiper_two', {
       speed: 400,
-      spaceBetween: 30,
+      spaceBetween: 50,
       slidesPerView: 1,
       loop: true,
-      // autoplay: {
-      //   delay: 3000,
-      //   disableOnInteraction: false
-      // },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
+      autoplay: {
+        delay: 3000,
       },
+      navigation: {
+        nextEl: '.swiper-next',
+        prevEl: '.swiper-prev',
+      },
+    });
+  </script>
+
+  <script>
+    var swiper3 = new Swiper(".popular-slider", {
+      spaceBetween: 10,
+      loop: true,
+      slidesPerView: 1.2,
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-      grabCursor: true,
+      breakpoints: {
+        460: {
+          slidesPerView: 1.5,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2.5,
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 3.3,
+          spaceBetween: 40,
+        },
+      }
     });
+
   </script>
 </body>
 

@@ -12,6 +12,11 @@
   --bg-main: #faf8ed;
 }
 
+
+.swiper-button-next:after, .swiper-button-prev:after {
+  display: none;
+}
+
 @layer base {
   body {
     @apply min-h-screen bg-bg_main font-inter text-primary dark:text-white dark:bg-black;

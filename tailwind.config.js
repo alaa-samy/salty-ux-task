@@ -18,7 +18,8 @@ module.exports = {
     },
     fontFamily:{
       sens: ['Sen', 'sans-serif'],
-      inter: ['Inter', 'sans-serif']
+      inter: ['Inter', 'sans-serif'],
+      poppin: ['Poppins', 'sans-serif']
     },
     extend: {
       colors: {

@@ -19,11 +19,11 @@ hamburger.addEventListener("click", () => {
 });
 
 /*~~~~~~~~~~~~~~~ TABS ~~~~~~~~~~~~~~~*/
-const tabs = document.querySelectorAll(".tabs_wrap ul li");
-const all = document.querySelectorAll(".item_wrap");
-const foods = document.querySelectorAll(".food");
-const beverages = document.querySelectorAll(".beverage");
-const snacks = document.querySelectorAll(".snack");
+const tabs = document.querySelectorAll(".tabs-wrap ul li");
+// const all = document.querySelectorAll(".item-wrap");
+const london = document.querySelectorAll(".london");
+const Bangkok = document.querySelectorAll(".bangkok");
+const England = document.querySelectorAll(".england");
 
 tabs.forEach((tab) => {
   tab.addEventListener("click", () => {
@@ -35,26 +35,26 @@ tabs.forEach((tab) => {
 
     const tabval = tab.getAttribute("data-tabs");
 
-    all.forEach((item) => {
-      item.style.display = "none";
-    });
+    // all.forEach((item) => {
+    //   item.style.display = "none";
+    // });
 
-    if (tabval == "food") {
-      foods.forEach((item) => {
+    if (tabval == "london") {
+      london.forEach((item) => {
         item.style.display = "block";
       });
-    } else if (tabval == "snack") {
-      snacks.forEach((item) => {
+    } else if (tabval == "bangkok") {
+      Bangkok.forEach((item) => {
         item.style.display = "block";
       });
-    } else if (tabval == "beverage") {
-      beverages.forEach((item) => {
+    } else if (tabval == "england") {
+      England.forEach((item) => {
         item.style.display = "block";
       });
     } else {
-      all.forEach((item) => {
-        item.style.display = "block";
-      });
+      // all.forEach((item) => {
+      //   item.style.display = "block";
+      // });
     }
   });
 });

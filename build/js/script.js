@@ -228,6 +228,9 @@ const swiper2 = new Swiper(".swiper_two", {
 var swiper3 = new Swiper(".popular-slider", {
   spaceBetween: 10,
   loop: true,
+  autoplay: {
+    delay: 3000,
+  },
   slidesPerView: 1.2,
   navigation: {
     nextEl: ".swiper-button-next",

@@ -30,16 +30,13 @@ module.exports = {
         bg_main: "var(--bg-main)",
       },
       keyframes: {
-        'open-menu': {
-          '0%': { transform: 'scaleY(0)' },
-          '80%': { transform: 'scaleY(1.2)' },
-          '100%': { transform: 'scaleY(1)' },
-        },
+        move: {
+          "50%": {transform: 'translateY(-1rem)'}
+        }
       },
       animation: {
-        'open-menu': 'open-menu 0.5s ease-in-out forwards',
-      },
-      
+        'movingY': 'move 2s linear infinite'
+      }
     },
   },
   plugins: [],

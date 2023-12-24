@@ -163,9 +163,9 @@ const scrollHeader = () => {
   const header = document.getElementById("header");
 
   if (this.scrollY >= 50) {
-    header.classList.add("border-b", "bg-white");
+    header.classList.add("bg-white", 'shadow-lg', 'text-[#2E476B]', 'dark:bg-primary', 'dark:text-white');
   } else {
-    header.classList.remove("border-b", "bg-white");
+    header.classList.remove("bg-white", 'shadow-lg', 'text-[#2E476B]', 'dark:bg-primary', 'dark:text-white');
   }
 };
 window.addEventListener("scroll", scrollHeader);

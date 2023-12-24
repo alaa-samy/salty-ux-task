@@ -187,7 +187,7 @@ window.addEventListener("scroll", scrollHeader);
 const swiper = new Swiper(".category-slider", {
   speed: 400,
   slidesPerView: 2,
-  spaceBetween: 10,
+  spaceBetween: 20,
   loop: true,
   autoplay: {
     delay: 3000,

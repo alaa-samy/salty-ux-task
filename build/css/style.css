@@ -1982,8 +1982,16 @@ section{
     font-size: 84px;
   }
 
+  .lg\:text-2xl{
+    font-size: 21px;
+  }
+
   .lg\:leading-\[66px\]{
     line-height: 66px;
+  }
+
+  .lg\:leading-\[29px\]{
+    line-height: 29px;
   }
 }
 

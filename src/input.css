@@ -12,7 +12,6 @@
   --bg-main: #faf8ed;
 }
 
-
 .swiper-button-next:after, .swiper-button-prev:after {
   display: none;
 }
@@ -34,3 +33,13 @@
   }
 }
 
+@media screen and (max-width: 500px){
+  #nav-menu{
+    background-color: #fff;
+    color: var(--main-color);
+    top: -20px;
+  }
+  #nav-menu button{
+    margin: auto;
+  }
+}

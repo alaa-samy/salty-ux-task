@@ -18,11 +18,14 @@
 }
 
 @layer base {
+  html {
+    @apply scroll-smooth;
+}
   body {
     @apply min-h-screen bg-bg_main font-inter text-primary dark:text-white dark:bg-black;
   }
   section {
-    @apply py-16 px-10 md:px-28 relative overflow-hidden
+    @apply py-8 md:py-16 px-10 md:px-28 relative overflow-hidden
   }
 }
 @layer utilities {

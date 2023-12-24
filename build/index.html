@@ -78,6 +78,7 @@
       </div>
     </nav>
   </header>
+
   <!-- Slider -->
   <section class="ralative overflow-hidden h-[500px] lg:h-[700px]">
     <div class="container mx-auto">
@@ -171,20 +172,32 @@
   <!-- Categories Section -->
   <section>
     <div class="container py-10">
-      <div class="grid grid-cols-3 gap-4 mb-10">
-        <div class="">
-          <h2 class="text-7xl font-600">Categories</h2>
+      <div class="block lg:flex items-center justify-between gap-4 mb-7 md:mb-10">
+        <div class="!w-full md:w-1/3">
+          <h2 class="text-5xl md:text-6xl lg:text-7xl font-600">Categories</h2>
           <p class="text-base text-third dark:text-white">Here are lots of interesting destinations to visit,
             but don’t be confused—they’re already grouped by category.</p>
         </div>
-        <div class="col-start-3 relative">
-          <div class="swiper-button-next !flex"></div>
-          <div class="swiper-button-prev !flex"></div>
+        <div class="flex gap-3 relative w-full md:w-[150px] max-w-sm:mt-5">
+          <div
+            class="swiper-prev w-14 h-14 p-5 rounded-full border-[1px] border-primary text-primary hover:bg-primary hover:text-white dark:text-secondary dark:border-secondary dark:hover:bg-secondary">
+            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M7 13L1 7L7 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
+          <div
+            class="swiper-next w-14 h-14 p-5 rounded-full border-[1px] border-primary text-primary hover:bg-primary hover:text-white dark:text-secondary dark:border-secondary dark:hover:bg-secondary ">
+            <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 13L7 7L1 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </div>
         </div>
       </div>
-      <div class="swiper">
+      <div class="swiper category-slider">
         <div class="swiper-wrapper">
-          <div class="swiper-slide ">
+          <div class="swiper-slide">
             <a href="#" class="relative text-center group">
               <div class="h-[220px] overflow-hidden">
                 <img src="img/category1.png" alt="Beach"
@@ -197,7 +210,7 @@
           </div>
 
           <div class="swiper-slide ">
-            <a href="#" class="relative text-center group">
+            <a href="#" class="relative text-center group transition ease-in-out duration-300">
               <div class="h-[220px] overflow-hidden">
                 <img src="img/category2.png" alt="Dessert"
                   class="h-full w-full object-contain group-hover:grayscale-[80%]" />
@@ -255,6 +268,18 @@
               <h3 class="text-4xl text-primary dark:text-secondary font-500">Pyramid</h3>
             </a>
           </div>
+
+          <div class="swiper-slide ">
+            <a href="#" class="relative text-center group">
+              <div class="h-[220px] overflow-hidden">
+                <img src="img/category3.png" alt="Mountain"
+                  class="h-full w-full object-contain group-hover:grayscale-[80%]" />
+                <span
+                  class="hidden text-xl font-600 absolute top-[37%] h-0 w-full text-white group-hover:block group-hover:h-full">Visit</span>
+              </div>
+              <h3 class="text-4xl text-primary dark:text-secondary font-500">Mountain</h3>
+            </a>
+          </div>
         </div>
       </div>
   </section>
@@ -263,8 +288,8 @@
   <section>
     <div class="container">
       <div class="grid grid-cols-12 gap-5">
-        <div class="col-span-full md:col-span-6">
-          <div class="relative">
+        <div class="col-span-full lg:col-span-6">
+          <div class="relative h-[500px] md:h-full">
             <div class="bg-white p-3 rounded-[14px] w-fit text-center absolute bottom-24 md:left-[-40px]">
               <div
                 class="w-20 h-20 bg-gradient-to-b from-amber-100 to-amber-200 rounded-full flex items-center justify-center">
@@ -273,9 +298,10 @@
               <span class="text-secondary text-3xl font-semibold mt-5 block text-center">600%</span>
               <span class="text-forth text-[19px] mt-3">Destinations</span>
             </div>
-            <img src="img/about.png" alt="About" />
+
+            <img src="img/about.png" alt="About" class="h-full w-full object-contain" />
             <div
-              class="bg-white py-3 px-5 rounded-[14px] w-fit text-center absolute bottom-10 md:right-0 flex items-center gap-5">
+              class="bg-white py-3 px-5 rounded-[14px] w-fit text-center absolute bottom-10 right-0 flex items-center gap-5">
               <img src="img/customer.png" alt="Customers" />
               <div class="">
                 <p class="text-main text-3xl font-semibold text-center font-poppin">5000+</p>
@@ -284,9 +310,11 @@
             </div>
           </div>
         </div>
-        <div class="col-span-full md:col-span-6 pl-0 md:pl-10">
+        <div class="col-span-full lg:col-span-6 pl-0 md:pl-10">
           <span class="text-secondary text-xl leading-tight tracking-[4px] mb-3">Our Experience</span>
-          <h2 class="text-primary dark:text-white text-5xl md:text-6xl lg:text-7xl mb-10 font-semibold lg:leading-[66px]">Our Stories
+          <h2
+            class="text-primary dark:text-white text-5xl md:text-6xl lg:text-7xl mb-10 font-semibold lg:leading-[66px]">
+            Our Stories
             Have
             Adventures</h2>
           <p class="text-base text-third dark:text-white">We are experienced in bringing adventures to stay
@@ -294,9 +322,9 @@
             with all outdoor
             destinations in the world as our specialties. Start your adventure now! Nature has already
             called you!</p>
-          <div class="grid grid-cols-12 gap-5 mt-10" id="counters_1">
-            <div class="col-span-full lg:col-span-4 md:col-span-6">
-              <div class="block items-center gap-2 bg-white rounded-lg p-3 md:py-5 md:px-7">
+          <div class="flex gap-4 mt-10 ietms-center" id="counters_1">
+            <div class="w-1/2 md:w-1/3">
+              <div class="block items-center gap-2 bg-white rounded-lg p-3 md:py-5 md:px-7 h-[175px]">
                 <div class="text-secondary text-4xl lg:text-6xl flex font-semibold">
                   <div class="counter" data-TargetNum="12" data-Speed="2500" data-Easing="linear">
                   </div>
@@ -305,24 +333,24 @@
                 <h3 class="text-forth text-lg md:text-2xl leading-[29px] mt-3">Succes Journey</h3>
               </div>
             </div>
-            <div class="col-span-full lg:col-span-4 md:col-span-6">
-              <div class="block items-center gap-2 bg-white rounded-lg py-5 px-7">
-                <div class="text-secondary text-6xl flex font-semibold">
+            <div class="w-1/2 md:w-1/3">
+              <div class="block items-center gap-2 bg-white rounded-lg p-3 md:py-5 md:px-7 h-[175px]">
+                <div class="text-secondary text-4xl lg:text-6xl flex font-semibold">
                   <div class="counter" data-TargetNum="16" data-Speed="2500" data-Easing="linear">
                   </div>
                   <span>+</span>
                 </div>
-                <h3 class="text-forth text-2xl leading-[29px] mt-3">Awards Winning</h3>
+                <h3 class="text-forth text-lg md:text-2xl leading-[29px] mt-3">Awards Winning</h3>
               </div>
             </div>
-            <div class="col-span-full lg:col-span-4 md:col-span-6">
-              <div class="block items-center gap-2 bg-white rounded-lg py-5 px-7">
-                <div class="text-secondary text-6xl flex font-semibold">
+            <div class="w-1/2 md:w-1/3">
+              <div class="block items-center gap-2 bg-white rounded-lg p-3 md:py-5 md:px-7 h-[175px]">
+                <div class="text-secondary text-4xl lg:text-6xl flex font-semibold">
                   <div class="counter" data-TargetNum="20" data-Speed="2500" data-Easing="linear">
                   </div>
                   <span>+</span>
                 </div>
-                <h3 class="text-forth text-2xl leading-[29px] mt-3">Years Of Experience</h3>
+                <h3 class="text-forth text-lg md:text-2xl leading-[29px] mt-3">Years Of Experience</h3>
               </div>
             </div>
           </div>
@@ -334,9 +362,9 @@
   <!-- Popular Section -->
   <section class="!px-0 !pl-10 md:!pl-28 !pr-0">
     <div class="block md:flex items-center justify-between gap-4 mb-10 md:pr-20">
-      <h2 class="text-5xl md:text-6xl lg:text-7xl font-semibold lg:leading-[66px] w-full lg:w-1/3">Find Popular
+      <h2 class="text-5xl md:text-6xl lg:text-7xl font-semibold lg:leading-[66px] w-full lg:w-1/3 mb-5">Find Popular
         Destination</h2>
-      <div class="relative w-[150px] max-w-sm:mt-10">
+      <div class="flex gap-3 relative w-[170px] max-w-sm:mt-10">
         <div
           class="swiper-button-prev w-14 h-14 p-5 rounded-full border-[1px] border-primary text-primary hover:bg-primary hover:text-white dark:text-secondary dark:border-secondary dark:hover:bg-secondary">
           <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -917,182 +945,15 @@
     </div>
   </section>
 
+  <!-- To Top -->
+  <a href="#" class="fixed right-4 -bottom-1/2 bg-secondary shadow-sm px-4 py-2 rounded-full text-lg text-white w-14 h-14 flex items-center justify-center z-50 hover:-translate-y-1 ease-in duration-200" id="scroll-up">
+    <i class="fa fa-long-arrow-up"></i>
+  </a>
+
   <script type="text/javascript" src="js/jquery.min.js"></script>
   <script type="text/javascript" src="js/swiper.min.js"></script>
   <script type="text/javascript" src="js/counter.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
-  <script>
-    const tabsContainer = document.querySelector(".tabs-container");
-    const tabsList = tabsContainer.querySelector("ul");
-    const tabButtons = tabsList.querySelectorAll("a");
-    const tabPanels = tabsContainer.querySelectorAll(".tabs__panels > div");
-
-    tabsList.setAttribute("role", "tablist");
-
-    tabsList.querySelectorAll("li").forEach((listitem) => {
-      listitem.setAttribute("role", "presentation");
-    });
-
-    tabButtons.forEach((tab, index) => {
-      tab.setAttribute("role", "tab");
-      if (index === 0) {
-        tab.setAttribute("aria-selected", "true");
-        // we'll add something here
-      } else {
-        tab.setAttribute("tabindex", "-1");
-        tabPanels[index].setAttribute("hidden", "");
-      }
-    });
-
-    tabPanels.forEach((panel) => {
-      panel.setAttribute("role", "tabpanel");
-      panel.setAttribute("tabindex", "0");
-    });
-
-    tabsContainer.addEventListener("click", (e) => {
-      const clickedTab = e.target.closest("a");
-      if (!clickedTab) return;
-      e.preventDefault();
-
-      switchTab(clickedTab);
-    });
-
-    tabsContainer.addEventListener("keydown", (e) => {
-      switch (e.key) {
-        case "ArrowLeft":
-          moveLeft();
-          break;
-        case "ArrowRight":
-          moveRight();
-          break;
-        case "Home":
-          e.preventDefault();
-          switchTab(tabButtons[0]);
-          break;
-        case "End":
-          e.preventDefault();
-          switchTab(tabButtons[tabButtons.length - 1]);
-          break;
-      }
-    });
-
-    function moveLeft() {
-      const currentTab = document.activeElement;
-      if (!currentTab.parentElement.previousElementSibling) {
-        switchTab(tabButtons[tabButtons.length - 1]);
-      } else {
-        switchTab(
-          currentTab.parentElement.previousElementSibling.querySelector("a")
-        );
-      }
-    }
-
-    function moveRight() {
-      const currentTab = document.activeElement;
-      if (!currentTab.parentElement.nextElementSibling) {
-        switchTab(tabButtons[0]);
-      } else {
-        switchTab(currentTab.parentElement.nextElementSibling.querySelector("a"));
-      }
-    }
-
-    function switchTab(newTab) {
-      const activePanelId = newTab.getAttribute("href");
-      const activePanel = tabsContainer.querySelector(activePanelId);
-
-      tabButtons.forEach((button) => {
-        button.setAttribute("aria-selected", false);
-        button.setAttribute("tabindex", "-1");
-      });
-
-      tabPanels.forEach((panel) => {
-        panel.setAttribute("hidden", true);
-      });
-
-      activePanel.removeAttribute("hidden", false);
-
-      newTab.setAttribute("aria-selected", true);
-      newTab.setAttribute("tabindex", "0");
-      newTab.focus();
-    }
-
-  </script>
-
-  <script>
-
-    // main-silder-swiper
-    const swiper = new Swiper('.swiper', {
-      speed: 400,
-      spaceBetween: 30,
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      grabCursor: true,
-      breakpoints: {
-        640: {
-          slidesPerView: 2,
-        },
-        768: {
-          slidesPerView: 4,
-        },
-        1024: {
-          slidesPerView: 6,
-        }
-      }
-    });
-
-    // testimonla-silder-swiper
-    const swiper2 = new Swiper('.swiper_two', {
-      speed: 400,
-      spaceBetween: 50,
-      slidesPerView: 1,
-      loop: true,
-      autoplay: {
-        delay: 3000,
-      },
-      navigation: {
-        nextEl: '.swiper-next',
-        prevEl: '.swiper-prev',
-      },
-    });
-  </script>
-
-  <script>
-    var swiper3 = new Swiper(".popular-slider", {
-      spaceBetween: 10,
-      loop: true,
-      slidesPerView: 1.2,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      breakpoints: {
-        460: {
-          slidesPerView: 1.5,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 2.5,
-          spaceBetween: 30,
-        },
-        1024: {
-          slidesPerView: 3.3,
-          spaceBetween: 40,
-        },
-      }
-    });
-
-  </script>
 </body>
 
 </html>

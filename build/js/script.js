@@ -18,46 +18,101 @@ hamburger.addEventListener("click", () => {
   navMenu.classList.remove("hidden");
 });
 
-/*~~~~~~~~~~~~~~~ TABS ~~~~~~~~~~~~~~~*/
-const tabs = document.querySelectorAll(".tabs-wrap ul li");
-// const all = document.querySelectorAll(".item-wrap");
-const london = document.querySelectorAll(".london");
-const Bangkok = document.querySelectorAll(".bangkok");
-const England = document.querySelectorAll(".england");
+/*~~~~~~~~~~~~~~~ Tabs ~~~~~~~~~~~~~~~*/
 
-tabs.forEach((tab) => {
-  tab.addEventListener("click", () => {
-    tabs.forEach((tab) => {
-      tab.classList.remove("active");
+const tabsContainer = document.querySelector(".tabs-container");
+    const tabsList = tabsContainer.querySelector("ul");
+    const tabButtons = tabsList.querySelectorAll("a");
+    const tabPanels = tabsContainer.querySelectorAll(".tabs__panels > div");
+
+    tabsList.setAttribute("role", "tablist");
+
+    tabsList.querySelectorAll("li").forEach((listitem) => {
+      listitem.setAttribute("role", "presentation");
     });
 
-    tab.classList.add("active");
+    tabButtons.forEach((tab, index) => {
+      tab.setAttribute("role", "tab");
+      if (index === 0) {
+        tab.setAttribute("aria-selected", "true");
+        // we'll add something here
+      } else {
+        tab.setAttribute("tabindex", "-1");
+        tabPanels[index].setAttribute("hidden", "");
+      }
+    });
 
-    const tabval = tab.getAttribute("data-tabs");
+    tabPanels.forEach((panel) => {
+      panel.setAttribute("role", "tabpanel");
+      panel.setAttribute("tabindex", "0");
+    });
 
-    // all.forEach((item) => {
-    //   item.style.display = "none";
-    // });
+    tabsContainer.addEventListener("click", (e) => {
+      const clickedTab = e.target.closest("a");
+      if (!clickedTab) return;
+      e.preventDefault();
 
-    if (tabval == "london") {
-      london.forEach((item) => {
-        item.style.display = "block";
-      });
-    } else if (tabval == "bangkok") {
-      Bangkok.forEach((item) => {
-        item.style.display = "block";
-      });
-    } else if (tabval == "england") {
-      England.forEach((item) => {
-        item.style.display = "block";
-      });
-    } else {
-      // all.forEach((item) => {
-      //   item.style.display = "block";
-      // });
+      switchTab(clickedTab);
+    });
+
+    tabsContainer.addEventListener("keydown", (e) => {
+      switch (e.key) {
+        case "ArrowLeft":
+          moveLeft();
+          break;
+        case "ArrowRight":
+          moveRight();
+          break;
+        case "Home":
+          e.preventDefault();
+          switchTab(tabButtons[0]);
+          break;
+        case "End":
+          e.preventDefault();
+          switchTab(tabButtons[tabButtons.length - 1]);
+          break;
+      }
+    });
+
+    function moveLeft() {
+      const currentTab = document.activeElement;
+      if (!currentTab.parentElement.previousElementSibling) {
+        switchTab(tabButtons[tabButtons.length - 1]);
+      } else {
+        switchTab(
+          currentTab.parentElement.previousElementSibling.querySelector("a")
+        );
+      }
     }
-  });
-});
+
+    function moveRight() {
+      const currentTab = document.activeElement;
+      if (!currentTab.parentElement.nextElementSibling) {
+        switchTab(tabButtons[0]);
+      } else {
+        switchTab(currentTab.parentElement.nextElementSibling.querySelector("a"));
+      }
+    }
+
+    function switchTab(newTab) {
+      const activePanelId = newTab.getAttribute("href");
+      const activePanel = tabsContainer.querySelector(activePanelId);
+
+      tabButtons.forEach((button) => {
+        button.setAttribute("aria-selected", false);
+        button.setAttribute("tabindex", "-1");
+      });
+
+      tabPanels.forEach((panel) => {
+        panel.setAttribute("hidden", true);
+      });
+
+      activePanel.removeAttribute("hidden", false);
+
+      newTab.setAttribute("aria-selected", true);
+      newTab.setAttribute("tabindex", "0");
+      newTab.focus();
+    }
 
 /*~~~~~~~~~~~~~~~ DARK LIGHT THEME ~~~~~~~~~~~~~~~*/
 const html = document.querySelector("html");
@@ -115,52 +170,69 @@ const scrollHeader = () => {
 };
 window.addEventListener("scroll", scrollHeader);
 
-/*~~~~~~~~~~~~~~~ SCROLL SECTIONS ACTIVE LINK ~~~~~~~~~~~~~~~*/
-const activeLink = () => {
-  const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".nav__link");
-
-  let current = "home";
-
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop;
-
-    if (this.scrollY >= sectionTop - 60) {
-      current = section.getAttribute("id");
+/*~~~~~~~~~~~~~~~ Sliders ~~~~~~~~~~~~~~~*/
+// main-silder-swiper
+const swiper = new Swiper('.category-slider', {
+  speed: 400,
+  slidesPerView: 2,
+  spaceBetween: 30,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+  },
+  navigation: {
+    nextEl: '.swiper-next',
+    prevEl: '.swiper-prev',
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    1024: {
+      slidesPerView: 6,
     }
-  });
-
-  navLinks.forEach((item) => {
-    item.classList.remove("text-secondaryColor");
-    if (item.href.includes(current)) {
-      item.classList.add("text-secondaryColor");
-    }
-  });
-};
-
-window.addEventListener("scroll", activeLink);
-
-/*~~~~~~~~~~~~~~~ SCROLL REVEAL ANIMATION ~~~~~~~~~~~~~~~*/
-const sr = ScrollReveal({
-  origin: "top",
-  distance: "60px",
-  duration: 2500,
-  delay: 400,
+  }
 });
 
-sr.reveal(".home__image");
-sr.reveal(".home__content", { origin: "bottom" });
+// testimonla-silder-swiper
+const swiper2 = new Swiper('.swiper_two', {
+  speed: 400,
+  spaceBetween: 50,
+  slidesPerView: 1,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+  },
+  navigation: {
+    nextEl: '.swiper-next',
+    prevEl: '.swiper-prev',
+  },
+});
 
-sr.reveal(".category__card", { interval: 300 });
-
-sr.reveal(".promo__card-1", { origin: "left" });
-sr.reveal(".promo__card-2", { origin: "right" });
-
-sr.reveal(".about__img", { origin: "bottom" });
-sr.reveal(".about__content", { origin: "top" });
-
-sr.reveal(".menu__items", { origin: "left" });
-
-sr.reveal(".customer__review", { origin: "right" });
-
-sr.reveal(".footer");
+// Popular slider
+var swiper3 = new Swiper(".popular-slider", {
+  spaceBetween: 10,
+  loop: true,
+  slidesPerView: 1.2,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    460: {
+      slidesPerView: 1.5,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 2.5,
+      spaceBetween: 30,
+    },
+    1024: {
+      slidesPerView: 3.3,
+      spaceBetween: 40,
+    },
+  }
+});
